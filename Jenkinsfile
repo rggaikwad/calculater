@@ -20,10 +20,6 @@ pipeline {
       }
     }
     
-    stage('ContDeliver') {
-      steps{
-        deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://18.213.0.69:9090/calculator/')], contextPath: null, war: 'target/calculator.war'
-      }
     }
-  }
-}
+    }
+ 
